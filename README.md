@@ -16,8 +16,7 @@ yarn start
 
 ## Issues and future improvements
 
-- Search should be made more flexible (it currently checks for exact match).
-- Unable to filter by song type (opening/ending/insert)
-- Search keywords are not highlighted in the lyrics.
+- Unable to see the lines of the lyrics past the search result.
+- Unable to filter by song type (opening/ending/insert).
 - Crude UI.
-
+- Need to find a better database for anime songs. Anime Song Lyrics is very incomplete, and has only songs from recent animes. Not to mention the romaji lyrics are often poorly written, with no fixed convention. Anime Lyrics has better lyrics, but is outdated.

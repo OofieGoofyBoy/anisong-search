@@ -3,17 +3,30 @@ import React from 'react'
 import { SearchInput } from './searchInput'
 import { SearchResult } from './searchResult'
 
+function debounceEvent(fn, delay) {
+  let timer = null;
+  return function() {
+    const ctx = this
+    const args = arguments
+    args[0].persist()
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      fn.apply(ctx, args);
+    }, delay);
+  };
+}
+
 export class AnisongSearch extends React.Component {
   state = {
     loading: true,
     currentInput: '',
   }
 
-  handleInputChange = (event) => {
+  handleInputChange = debounceEvent((event) => {
     this.setState({
-      currentInput: event.target.value
+      currentInput: event.target.value.trim()
     })
-  }
+  }, 300)
 
   componentDidMount() {
     this.data = require('../data.json')

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './App.css'
 import { AnisongSearch } from './components/anisongSearch'
 
 function App() {
