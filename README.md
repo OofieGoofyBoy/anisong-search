@@ -4,9 +4,15 @@
 
 This is an app that provides a quick way to search for an anime given a fragment of the lyrics of one of its songs ~so you can cheat at Anime Music Quiz~.
 
-## Requisites
+## Usage
 
-You might need to run [this crawler](https://github.com/marcoskwkm/anisong-crawler) to generate the song data to be consumed by this app.
+- Run [this crawler](https://github.com/marcoskwkm/anisong-crawler) and save the generated `data.json` in the `/src` folder of this app.
+- Run
+```
+yarn install
+yarn start
+```
+- The app will be available at `http://locahost:3000`.
 
 ## Issues and future improvements
 
